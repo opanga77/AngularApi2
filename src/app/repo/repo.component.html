@@ -1,0 +1,37 @@
+<body>
+
+  <br>
+  <br>
+  <h1 style="color:white" align="center">GitHub Repositories</h1>
+  <div class="container">
+    <div id="swara">
+      <form class="form" >
+        <input type="text" class="form-control" placeholder="Search Username" [(ngModel)]="userName" name="userName" (keyup)="findUser()">
+      
+      </form>
+    </div>
+    <br>
+    <br>
+
+    <div class="card" *ngIf="user1">
+      <div class="card-header">
+        <h3>{{user1.login}} 's repositories</h3>
+        <small>{{user1.name}}</small>
+      </div>
+      <div class="card-body">
+        <div class="row" *ngFor='let repo of repos, let i=index'>
+          <div class="col-md-4">
+            {{repos[i].name}}
+          </div>
+          <div class="col-md-4"><!--small pipe to change date format-->
+            {{repos[i].pushed_at| date:short:timezone}}
+          </div>
+          <div class="col-md-4">
+            <a href="{{repos[i].html_url}}" target="_blank"><button class="btn-inline btn-outline-info">View on Github</button></a>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</body>

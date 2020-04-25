@@ -1,0 +1,28 @@
+.card-header {
+  background-color: #606060;
+  color: white;
+  text-align: center;
+}
+
+body {
+  /* background-color: #dddddd; */
+  background-image: url('https://bit.ly/2S45OKW');
+}
+
+.row {
+  padding: 6px;
+  border-bottom: 1px solid grey;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+#swara {
+    margin: auto;
+    width: 60%;
+    border: 0px solid #73AD21;
+    padding: 10px;
+}
